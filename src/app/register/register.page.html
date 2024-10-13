@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>หน้าสมัครสมาชิก</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-item>
+    <ion-label>คำนำหน้า</ion-label>
+    <ion-select aria-label="Fruit" interface="popover" slot="end" placeholder="กรุณาเลือก" [(ngModel)]="txtTitle">
+      <ion-select-option value="นาย">นาย</ion-select-option>
+      <ion-select-option value="นาง">นาง</ion-select-option>
+      <ion-select-option value="นางสาว">นางสาว</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="text" label="กรอกชื่อ" [(ngModel)]="txtName"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="text" label="กรอกนามสกุล" [(ngModel)]="txtSname"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="text" label="กรอก Username" [(ngModel)]="txtUsername"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="password" label="กรอก Password" [(ngModel)]="txtPassword">
+      <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>ระดับสิทธิ์</ion-label>
+    <ion-select aria-label="Fruit" interface="popover" slot="end" placeholder="กรุณาเลือก" [(ngModel)]="txtPosition">
+      <ion-select-option value="admin">ผู้ดูแลระบบ</ion-select-option>
+      <ion-select-option value="user">ผู้ใช้งาน</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <br>
+
+  <ion-button expand="block" color="primary" (click)="addmember()">สมัครสมาชิก</ion-button>
+
+
+</ion-content>
